@@ -1,0 +1,68 @@
+/*Use <blink> or class="blink" to make things blink*/
+blink,
+.blink {
+  -webkit-animation: blink 1s step-end infinite;
+	-moz-animation: blink 1s step-end infinite;
+	-ms-animation: blink 1s step-end infinite;
+	-o-animation: blink 1s step-end infinite;
+	animation: blink 1s step-end infinite;
+}
+
+@keyframes "blink" {
+	0%,100% {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		filter: alpha(opacity=0);
+		opacity: 0;
+	}
+	50% {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+		filter: alpha(opacity=100);
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes blink {
+	0%,100% {
+		filter: alpha(opacity=0);
+		opacity: 0;
+	}
+	50% {
+		filter: alpha(opacity=100);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes "blink" {
+	0%,100% {
+		filter: alpha(opacity=0);
+		opacity: 0;
+	}
+	50% {
+		filter: alpha(opacity=100);
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes "blink" {
+	0%,100% {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		filter: alpha(opacity=0);
+		opacity: 0;
+	}
+	50% {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+		filter: alpha(opacity=100);
+		opacity: 1;
+	}
+}
+
+@-o-keyframes "blink" {
+	0%,100% {
+		filter: alpha(opacity=0);
+		opacity: 0;
+	}
+	50% {
+		filter: alpha(opacity=100);
+		opacity: 1;
+	}
+}
